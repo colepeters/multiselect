@@ -11,7 +11,7 @@ export default function MultiSelectRoot({ label, children }) {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <MultiSelectTrigger>
-          <Text as='span' pr={2}>
+          <Text as='span' pr={1}>
             {label}
           </Text>
           <TriangleDownIcon />

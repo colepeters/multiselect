@@ -2,6 +2,7 @@ import {
   CheckboxItem as CheckboxItemPrimitive,
   ItemIndicator,
 } from '@radix-ui/react-dropdown-menu'
+import { CheckIcon } from '@radix-ui/react-icons'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -30,12 +31,17 @@ export default function CheckboxItem({ label, checked, onCheckedChange }) {
       <Box
         size={16}
         bg={checked ? 'black' : 'transparent'}
+        color='white'
         border='1px solid'
         borderColor='gray900'
         borderRadius='xsmall'
+        display='flex'
+        justifyContent='center'
         flexShrink={0}
       >
-        <ItemIndicator />
+        <ItemIndicator>
+          <CheckIcon />
+        </ItemIndicator>
       </Box>
       <Text pl={2}>{label}</Text>
     </StyledPrimitive>
