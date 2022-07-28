@@ -1,7 +1,19 @@
-import '../styles/globals.css'
+// NextJS custom app
+// https://nextjs.org/docs/advanced-features/custom-app
+import 'normalize.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { ThemeProvider } from 'styled-components'
+
+import GlobalStyle from '../components/GlobalStyle'
+import theme from '../lib/theme'
+
+function App({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
-export default MyApp
+export default App

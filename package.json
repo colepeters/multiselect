@@ -11,8 +11,11 @@
   "dependencies": {
     "@colepeters/eslint-config": "^1.0.1",
     "next": "12.2.3",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.5",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "eslint": "8.20.0",
