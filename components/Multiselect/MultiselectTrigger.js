@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const MultiselectTrigger = styled.button`
+const MultiSelectTrigger = styled.button`
   all: unset;
   background: ${(props) => props.theme.colors.blue900};
   border-radius: ${(props) => props.theme.radii.small}px;
@@ -9,17 +9,22 @@ const MultiselectTrigger = styled.button`
   color: white;
   cursor: pointer;
   font-weight: ${(props) => props.theme.fontWeights.medium};
-  font-size: ${(props) => props.theme.fontSizes[0]};
+  font-size: ${(props) => props.theme.fontSizes[1]};
   padding: ${(props) => props.theme.space[3]}px
     ${(props) => props.theme.space[4]}px;
   text-transform: uppercase;
   transition: background 0.125s linear;
+
+  /* Force the trigger's background colour when the MultiSelect is open */
+  &[aria-expanded='true'] {
+    background: ${(props) => props.theme.colors.blue500};
+  }
 
   &:hover {
     background: ${(props) => props.theme.colors.blue500};
   }
 `
 
-MultiselectTrigger.displayName = 'MultiselectTrigger'
+MultiSelectTrigger.displayName = 'MultiSelectTrigger'
 
-export default MultiselectTrigger
+export default MultiSelectTrigger
