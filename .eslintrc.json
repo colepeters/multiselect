@@ -1,3 +1,3 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["@colepeters/eslint-config", "prettier", "next/core-web-vitals"]
 }
