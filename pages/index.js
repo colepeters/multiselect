@@ -1,16 +1,16 @@
 import MultiSelect from '../components/MultiSelect'
 import Box from '../components/primitives/Box'
-import { getPets } from '../lib/api'
+import { getPets, groupPetsBySpecies } from '../lib/api'
 
-export default function Home({ pets }) {
+export default function Home({ petsBySpecies }) {
   return (
     <Box px={[4, 6, 7]} py={[4, 6]}>
       <h1>MultiSelect</h1>
       <MultiSelect.Root label='Select Pets'>
-        {pets.map((group) => (
-          <MultiSelect.Group key={group.species} label={group.species}>
-            {group.members.map((member) => (
-              <MultiSelect.CheckboxItem key={member.name} label={member.name} />
+        {Object.keys(petsBySpecies).map((species) => (
+          <MultiSelect.Group key={species} label={species}>
+            {petsBySpecies[species].map((pet) => (
+              <MultiSelect.CheckboxItem key={pet.id} label={pet.name} />
             ))}
           </MultiSelect.Group>
         ))}
@@ -21,10 +21,11 @@ export default function Home({ pets }) {
 
 export async function getServerSideProps() {
   const pets = await getPets()
+  const petsBySpecies = groupPetsBySpecies(pets)
 
   return {
     props: {
-      pets,
+      petsBySpecies,
     },
   }
 }

@@ -3,20 +3,44 @@
 
 const mockedPets = [
   {
+    id: 1,
     species: 'Birds',
-    members: [{ name: 'Hermes' }, { name: 'Charlie' }],
+    name: 'Hermes',
   },
   {
+    id: 2,
+    species: 'Birds',
+    name: 'Charlie',
+  },
+  {
+    id: 3,
     species: 'Cats',
-    members: [{ name: 'Roody' }, { name: 'Sgt. Tibbs' }, { name: 'Marmalade' }],
+    name: 'Roody',
   },
   {
+    id: 4,
+    species: 'Cats',
+    name: 'Sgt. Tibbs',
+  },
+  {
+    id: 5,
+    species: 'Cats',
+    name: 'Marmalade',
+  },
+  {
+    id: 6,
     species: 'Dogs',
-    members: [
-      { name: 'Stains' },
-      { name: 'Rt. Hon. Sir H. E. Barkington The Third, Esq.' },
-      { name: 'Stella' },
-    ],
+    name: 'Roofus',
+  },
+  {
+    id: 7,
+    species: 'Dogs',
+    name: 'Sir H. E. Barkington The Third, Esq.',
+  },
+  {
+    id: 8,
+    species: 'Dogs',
+    name: 'Olli',
   },
 ]
 
