@@ -18,7 +18,7 @@ const StyledPrimitive = styled(CheckboxItemPrimitive)`
   &:hover,
   &:focus {
     outline: none;
-    background: ${(props) => props.theme.colors.gray100};
+    background: ${(props) => props.theme.colors.gray300};
   }
 `
 
@@ -43,8 +43,10 @@ export default function CheckboxItem({ label, checked, onCheckedChange }) {
         position='relative'
         top='3px'
       >
-        <ItemIndicator>
-          <CheckIcon />
+        <ItemIndicator forceMount>
+          <Box opacity={checked ? 1 : 0} position='relative' top={-1}>
+            <CheckIcon />
+          </Box>
         </ItemIndicator>
       </Box>
       <Text pl={3}>{label}</Text>

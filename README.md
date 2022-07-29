@@ -16,6 +16,7 @@ July X, 2022
 | Rendering basic checkbox UI & reformatting API mock      | 1 hour     |
 | Checkbox list state management & basic checkbox state UI | 0.25 hours |
 | Text filtering logic & UI                                | 0.75 hours |
+| Custom scrollbar (incl. failed attempt, see below)       | 1 hour     |
 
 ### Assumptions
 

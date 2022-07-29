@@ -3,6 +3,7 @@ import { useState } from 'react'
 import MultiSelect from '../components/MultiSelect'
 import Box from '../components/primitives/Box'
 import Text from '../components/primitives/Text'
+import ScrollArea from '../components/ScrollArea'
 import { getPets, groupPetsBySpecies } from '../lib/api'
 
 export default function Home({ pets }) {
@@ -39,24 +40,26 @@ export default function Home({ pets }) {
           </Box>
         )}
 
-        {Object.keys(filteredPetsBySpecies).map((species) => (
-          <MultiSelect.Group key={species} label={species}>
-            {filteredPetsBySpecies[species].map((pet) => (
-              <MultiSelect.CheckboxItem
-                key={pet.id}
-                label={pet.name}
-                checked={selectedPets.includes(pet.id)}
-                onCheckedChange={() =>
-                  setSelectedPets((currentSelectedPets) =>
-                    currentSelectedPets.includes(pet.id)
-                      ? currentSelectedPets.filter((id) => id !== pet.id)
-                      : currentSelectedPets.concat([pet.id])
-                  )
-                }
-              />
-            ))}
-          </MultiSelect.Group>
-        ))}
+        <ScrollArea maxHeight={290}>
+          {Object.keys(filteredPetsBySpecies).map((species) => (
+            <MultiSelect.Group key={species} label={species}>
+              {filteredPetsBySpecies[species].map((pet) => (
+                <MultiSelect.CheckboxItem
+                  key={pet.id}
+                  label={pet.name}
+                  checked={selectedPets.includes(pet.id)}
+                  onCheckedChange={() =>
+                    setSelectedPets((currentSelectedPets) =>
+                      currentSelectedPets.includes(pet.id)
+                        ? currentSelectedPets.filter((id) => id !== pet.id)
+                        : currentSelectedPets.concat([pet.id])
+                    )
+                  }
+                />
+              ))}
+            </MultiSelect.Group>
+          ))}
+        </ScrollArea>
       </MultiSelect.Root>
     </Box>
   )
