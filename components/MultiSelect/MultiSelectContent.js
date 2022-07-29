@@ -8,7 +8,7 @@ const MultiSelectContent = styled(Box).attrs({
   boxShadow: 1,
   fontSize: 1,
   width: 240,
-  py: 4,
+  py: 2,
 })``
 
 MultiSelectContent.displayName = 'MultiSelectContent'

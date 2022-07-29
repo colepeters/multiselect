@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import MultiSelect from '../components/MultiSelect'
 import Box from '../components/primitives/Box'
+import Text from '../components/primitives/Text'
 import { getPets, groupPetsBySpecies } from '../lib/api'
 
 export default function Home({ pets }) {
@@ -31,6 +32,12 @@ export default function Home({ pets }) {
           setValue={setSearchTerm}
           placeholder='Search'
         />
+
+        {searchTerm && filteredPets.length === 0 && (
+          <Box px={4} py={3}>
+            <Text>Sorry, there are no pets matching ‘{searchTerm}’.</Text>
+          </Box>
+        )}
 
         {Object.keys(filteredPetsBySpecies).map((species) => (
           <MultiSelect.Group key={species} label={species}>

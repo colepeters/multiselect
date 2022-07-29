@@ -7,9 +7,9 @@ import Text from '../primitives/Text'
 export default function MultiSelectGroup({ label, children }) {
   return (
     <Group asChild>
-      <Box pt={4}>
+      <Box pt={2}>
         <Label asChild>
-          <Text fontSize={0} px={4} pb={4} fontWeight='medium' color='gray900'>
+          <Text fontSize={0} px={4} pb={2} fontWeight='medium' color='gray900'>
             {label}
           </Text>
         </Label>

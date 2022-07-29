@@ -10,8 +10,9 @@ import Text from '../primitives/Text'
 
 const StyledPrimitive = styled(CheckboxItemPrimitive)`
   display: flex;
+  align-items: baseline;
   cursor: pointer;
-  padding: ${(props) => props.theme.space[3]}px
+  padding: ${(props) => props.theme.space[2]}px
     ${(props) => props.theme.space[4]}px;
 
   &:hover,
@@ -39,12 +40,14 @@ export default function CheckboxItem({ label, checked, onCheckedChange }) {
         display='flex'
         justifyContent='center'
         flexShrink={0}
+        position='relative'
+        top='3px'
       >
         <ItemIndicator>
           <CheckIcon />
         </ItemIndicator>
       </Box>
-      <Text pl={2}>{label}</Text>
+      <Text pl={3}>{label}</Text>
     </StyledPrimitive>
   )
 }

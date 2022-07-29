@@ -1,3 +1,4 @@
+import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
 import { Cross2Icon, MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import styled from 'styled-components'
 
@@ -34,7 +35,7 @@ const ClearButton = styled.button`
 
 export default function SearchItem({ value, setValue, placeholder }) {
   return (
-    <Box py={3} px={4}>
+    <Box py={2} px={4}>
       <Box
         border='1px solid'
         borderColor='gray500'
@@ -62,7 +63,9 @@ export default function SearchItem({ value, setValue, placeholder }) {
         />
         {value !== '' && (
           <ClearButton onClick={() => setValue('')}>
-            <Cross2Icon />
+            <AccessibleIcon.Root label='Clear search term'>
+              <Cross2Icon />
+            </AccessibleIcon.Root>
           </ClearButton>
         )}
       </Box>
