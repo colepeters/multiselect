@@ -15,6 +15,7 @@ July X, 2022
 | Basic multiselect implementation                         | 1.25 hours |
 | Rendering basic checkbox UI & reformatting API mock      | 1 hour     |
 | Checkbox list state management & basic checkbox state UI | 0.25 hours |
+| Text filtering logic & UI                                | 0.75 hours |
 
 ### Assumptions
 

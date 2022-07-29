@@ -27,6 +27,7 @@ export default function CheckboxItem({ label, checked, onCheckedChange }) {
       checked={checked}
       onCheckedChange={onCheckedChange}
       onSelect={(e) => e.preventDefault()}
+      textValue='' // disable Radix's builtin typeahead support :(
     >
       <Box
         size={16}

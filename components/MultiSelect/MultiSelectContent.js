@@ -7,7 +7,7 @@ const MultiSelectContent = styled(Box).attrs({
   borderRadius: 'small',
   boxShadow: 1,
   fontSize: 1,
-  maxWidth: 240,
+  width: 240,
   py: 4,
 })``
 

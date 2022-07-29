@@ -4,8 +4,17 @@ import MultiSelect from '../components/MultiSelect'
 import Box from '../components/primitives/Box'
 import { getPets, groupPetsBySpecies } from '../lib/api'
 
-export default function Home({ petsBySpecies }) {
+export default function Home({ pets }) {
   const [selectedPets, setSelectedPets] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const filteredPets = searchTerm
+    ? pets.filter((pet) =>
+        pet.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : pets
+
+  const filteredPetsBySpecies = groupPetsBySpecies(filteredPets)
 
   return (
     <Box px={[4, 6, 7]} py={[4, 6]}>
@@ -17,9 +26,15 @@ export default function Home({ petsBySpecies }) {
             : 'Selected Pets'
         }
       >
-        {Object.keys(petsBySpecies).map((species) => (
+        <MultiSelect.SearchItem
+          value={searchTerm}
+          setValue={setSearchTerm}
+          placeholder='Search'
+        />
+
+        {Object.keys(filteredPetsBySpecies).map((species) => (
           <MultiSelect.Group key={species} label={species}>
-            {petsBySpecies[species].map((pet) => (
+            {filteredPetsBySpecies[species].map((pet) => (
               <MultiSelect.CheckboxItem
                 key={pet.id}
                 label={pet.name}
@@ -42,11 +57,10 @@ export default function Home({ petsBySpecies }) {
 
 export async function getServerSideProps() {
   const pets = await getPets()
-  const petsBySpecies = groupPetsBySpecies(pets)
 
   return {
     props: {
-      petsBySpecies,
+      pets,
     },
   }
 }
