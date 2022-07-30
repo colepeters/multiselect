@@ -4,6 +4,7 @@ import {
   CheckboxItem as CheckboxItemPrimitive,
   ItemIndicator,
 } from '@radix-ui/react-dropdown-menu'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -31,4 +32,10 @@ export default function CheckboxItem({ label, checked, onCheckedChange }) {
       <Box pl={3}>{label}</Box>
     </StyledPrimitive>
   )
+}
+
+CheckboxItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
+  onCheckedChange: PropTypes.func.isRequired,
 }

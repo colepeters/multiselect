@@ -9,6 +9,8 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../components/GlobalStyle'
 import theme from '../lib/theme'
 
+// See FontAwesome NextJS setup guide at:
+// https://fontawesome.com/docs/web/use-with/react/use-with
 config.autoAddCss = false
 
 function App({ Component, pageProps }) {

@@ -1,6 +1,7 @@
 import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
 import { Item } from '@radix-ui/react-dropdown-menu'
 import { Cross2Icon, MagnifyingGlassIcon } from '@radix-ui/react-icons'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -79,4 +80,15 @@ export default function SearchItem({ value, setValue, placeholder }) {
       </Box>
     </Box>
   )
+}
+
+SearchItem.defaultProps = {
+  value: '',
+  placeholder: 'Search',
+}
+
+SearchItem.propTypes = {
+  value: PropTypes.string,
+  setValue: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
 }

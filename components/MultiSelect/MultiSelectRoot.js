@@ -36,3 +36,8 @@ MultiSelectRoot.propTypes = {
   label: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
+
+MultiSelectRoot.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}

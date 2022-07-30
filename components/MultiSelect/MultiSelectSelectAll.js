@@ -2,6 +2,7 @@ import { faCheck, faMinus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { Item } from '@radix-ui/react-dropdown-menu'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -37,4 +38,12 @@ export default function SelectAll({ checked, onCheckedChange }) {
       </Checkbox.Root>
     </Item>
   )
+}
+
+SelectAll.propTypes = {
+  checked: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['indeterminate']),
+  ]).isRequired,
+  onCheckedChange: PropTypes.func.isRequired,
 }

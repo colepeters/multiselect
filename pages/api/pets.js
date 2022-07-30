@@ -44,6 +44,7 @@ const mockedPets = [
   },
 ]
 
+// A mock REST API which returns the pets data in the shape defined above in response to a GET request
 export default function petsHandler(request, response) {
   const { method } = request
 

@@ -1,6 +1,7 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Item } from '@radix-ui/react-dropdown-menu'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -35,4 +36,9 @@ export default function ButtonItem({ label, onClick }) {
       </Button>
     </Item>
   )
+}
+
+ButtonItem.propTypes = {
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 }
