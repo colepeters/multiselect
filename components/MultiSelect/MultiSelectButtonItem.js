@@ -1,5 +1,6 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Item } from '@radix-ui/react-dropdown-menu'
-import { ArrowRightIcon } from '@radix-ui/react-icons'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -30,7 +31,7 @@ export default function ButtonItem({ label, onClick }) {
         <Box as='span' flex={1}>
           {label}
         </Box>
-        <ArrowRightIcon />
+        <FontAwesomeIcon icon={faArrowRight} />
       </Button>
     </Item>
   )

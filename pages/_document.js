@@ -4,7 +4,7 @@
 // Styled Components setup adapted from the NextJS Styled Components example:
 // https://github.com/vercel/next.js/blob/canary/examples/with-styled-components/pages/_document.tsx
 
-import Document from 'next/document'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class CustomDocument extends Document {
@@ -27,5 +27,24 @@ export default class CustomDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
+          <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap'
+            rel='stylesheet'
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }

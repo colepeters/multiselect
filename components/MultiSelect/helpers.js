@@ -7,13 +7,12 @@ const CheckboxOutline = styled(Box).attrs((props) => ({
   bg: props.checked ? 'black' : 'transparent',
   color: 'white',
   border: '1px solid',
-  borderColor: 'gray900',
+  borderColor: 'black',
   borderRadius: 'xsmall',
   display: 'flex',
   justifyContent: 'center',
   flexShrink: 0,
-  position: 'relative',
-  top: '3px',
+  lineHeight: 1,
 }))``
 
 CheckboxOutline.displayName = 'CheckboxOutline'

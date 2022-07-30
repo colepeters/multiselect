@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@colepeters/eslint-config": "^1.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@radix-ui/react-accessible-icon": "^1.0.0",
     "@radix-ui/react-checkbox": "^1.0.0",
     "@radix-ui/react-dropdown-menu": "^1.0.0",
-    "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-scroll-area": "^1.0.0",
     "next": "12.2.3",
     "normalize.css": "^8.0.1",

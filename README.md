@@ -19,6 +19,7 @@ July X, 2022
 | Custom scrollbar (incl. failed attempt, see below)       | 1 hour     |
 | Multiselect button                                       | 0.25 hours |
 | Select All logic & UI                                    | 0.75 hours |
+| Use webfonts and swap placeholder icons for FontAwesome  | 0.25 hours |
 
 ### Assumptions
 

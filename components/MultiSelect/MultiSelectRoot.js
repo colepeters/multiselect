@@ -1,5 +1,6 @@
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
-import { TriangleDownIcon } from '@radix-ui/react-icons'
 import PropTypes from 'prop-types'
 
 import Text from '../primitives/Text'
@@ -11,10 +12,10 @@ export default function MultiSelectRoot({ label, children }) {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <MultiSelectTrigger>
-          <Text as='span' pr={1}>
+          <Text as='span' pr={2}>
             {label}
           </Text>
-          <TriangleDownIcon />
+          <FontAwesomeIcon icon={faCaretDown} />
         </MultiSelectTrigger>
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>

@@ -1,8 +1,9 @@
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   CheckboxItem as CheckboxItemPrimitive,
   ItemIndicator,
 } from '@radix-ui/react-dropdown-menu'
-import { CheckIcon } from '@radix-ui/react-icons'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -22,8 +23,8 @@ export default function CheckboxItem({ label, checked, onCheckedChange }) {
     >
       <CheckboxOutline checked={checked}>
         <ItemIndicator forceMount>
-          <Box opacity={checked ? 1 : 0} position='relative' top={-1}>
-            <CheckIcon />
+          <Box opacity={checked ? 1 : 0}>
+            <FontAwesomeIcon icon={faCheck} />
           </Box>
         </ItemIndicator>
       </CheckboxOutline>

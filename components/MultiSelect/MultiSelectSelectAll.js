@@ -1,6 +1,7 @@
+import { faCheck, faMinus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { Item } from '@radix-ui/react-dropdown-menu'
-import { CheckIcon, DividerHorizontalIcon } from '@radix-ui/react-icons'
 import styled from 'styled-components'
 
 import Box from '../primitives/Box'
@@ -24,12 +25,10 @@ export default function SelectAll({ checked, onCheckedChange }) {
         <Label>
           <CheckboxOutline checked={checked}>
             <Checkbox.Indicator forceMount>
-              <Box opacity={checked ? 1 : 0} position='relative' top={-1}>
-                {checked === 'indeterminate' ? (
-                  <DividerHorizontalIcon />
-                ) : (
-                  <CheckIcon />
-                )}
+              <Box opacity={checked ? 1 : 0}>
+                <FontAwesomeIcon
+                  icon={checked === 'indeterminate' ? faMinus : faCheck}
+                />
               </Box>
             </Checkbox.Indicator>
           </CheckboxOutline>
