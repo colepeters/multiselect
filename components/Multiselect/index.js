@@ -3,6 +3,7 @@ import MultiSelectCheckboxItem from './MultiSelectCheckboxItem'
 import MultiSelectGroup from './MultiSelectGroup'
 import MultiSelectRoot from './MultiSelectRoot'
 import MultiSelectSearchItem from './MultiSelectSearchItem'
+import MultiSelectSelectAll from './MultiSelectSelectAll'
 import MultiSelectSeparator from './MultiSelectSeparator'
 
 const MultiSelect = {
@@ -12,6 +13,7 @@ const MultiSelect = {
   SearchItem: MultiSelectSearchItem,
   Separator: MultiSelectSeparator,
   ButtonItem: MultiSelectButtonItem,
+  SelectAll: MultiSelectSelectAll,
 }
 
 export default MultiSelect

@@ -18,6 +18,7 @@ July X, 2022
 | Text filtering logic & UI                                | 0.75 hours |
 | Custom scrollbar (incl. failed attempt, see below)       | 1 hour     |
 | Multiselect button                                       | 0.25 hours |
+| Select All logic & UI                                    | 0.75 hours |
 
 ### Assumptions
 

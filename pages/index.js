@@ -10,6 +10,34 @@ export default function Home({ pets }) {
   const [selectedPets, setSelectedPets] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
 
+  const getSelectAllChecked = () => {
+    // All pets selected
+    if (selectedPets.length === pets.length) return true
+
+    // Some pets selected
+    if (selectedPets.length) return 'indeterminate'
+
+    // No pets selected
+    return false
+  }
+
+  const handleSelectAll = () => {
+    // All pets selected — deselect all
+    if (selectedPets.length === pets.length) {
+      setSelectedPets([])
+      return
+    }
+
+    // Some pets selected — select all
+    if (selectedPets.length) {
+      setSelectedPets(pets.map((pet) => pet.id))
+      return
+    }
+
+    // No pets selected — select all
+    setSelectedPets(pets.map((pet) => pet.id))
+  }
+
   const filteredPets = searchTerm
     ? pets.filter((pet) =>
         pet.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -38,6 +66,13 @@ export default function Home({ pets }) {
           <Box px={4} py={3}>
             <Text>Sorry, there are no pets matching ‘{searchTerm}’.</Text>
           </Box>
+        )}
+
+        {!searchTerm && (
+          <MultiSelect.SelectAll
+            checked={getSelectAllChecked()}
+            onCheckedChange={handleSelectAll}
+          />
         )}
 
         <ScrollArea maxHeight={290}>
