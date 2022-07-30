@@ -23,6 +23,12 @@ const MultiSelectTrigger = styled.button`
   &:hover {
     background: ${(props) => props.theme.colors.blue500};
   }
+
+  &:focus-visible {
+    background: ${(props) => props.theme.colors.blue500};
+    box-shadow: 0 0 0 1px ${(props) => props.theme.colors.blue500};
+    outline: ${(props) => props.theme.colors.blue500} 4px double;
+  }
 `
 
 MultiSelectTrigger.displayName = 'MultiSelectTrigger'

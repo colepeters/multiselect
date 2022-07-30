@@ -60,6 +60,15 @@ export default function Home({ pets }) {
             </MultiSelect.Group>
           ))}
         </ScrollArea>
+        <MultiSelect.Separator />
+        <MultiSelect.ButtonItem
+          label='Manage Animals'
+          onClick={() =>
+            alert(
+              'The animal manager is currently on holidays. Please come back another day.'
+            )
+          }
+        />
       </MultiSelect.Root>
     </Box>
   )
