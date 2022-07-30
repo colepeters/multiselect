@@ -17,6 +17,7 @@ July X, 2022
 | Checkbox list state management & basic checkbox state UI | 0.25 hours |
 | Text filtering logic & UI                                | 0.75 hours |
 | Custom scrollbar (incl. failed attempt, see below)       | 1 hour     |
+| Multiselect button                                       | 0.25 hours |
 
 ### Assumptions
 
