@@ -1,5 +1,7 @@
 # Multiselect
 
+**See it live: https://multiselect-eta.vercel.app/**
+
 ## Notes
 
 ### Overview
@@ -27,6 +29,8 @@ This has been my go-to styling stack for over 5 years, as it has proven to be a 
 [Styled Components](https://styled-components.com/) allows for the creation of fine grained, low level styles which can easily integrate with JavaScript, which aligns perfectly with React's ‘style as a function of props’ ethos. I've been able to create dynamic styles with Styled Components that would be simply impossible with CSS alone.
 
 [Styled System](https://styled-system.com/) is a collection of utility functions which can be used to author UI components with ‘style props’ — that is, React props bound to a theme object, which itself represents the values that collectively define an organization's design system. While Styled System's API can take some getting used to, it enables incredibly fast, iterative, responsive UI development that is necessarily consistent with design systems. It works in concert with Styled Components to deliver a complete styling solution for React apps.
+
+An excellent overview of the general approach I take to building composable UIs can be found [on Brent Jackson’s blog](https://jxnblk.com/blog/design-graph/).
 
 #### Utility library: Ramda
 
@@ -100,7 +104,7 @@ There were no stretch goals defined for this assignment, but given more time and
 - Adding (subtle) UI animations (open/close animations for the multiselect content area, checkmark toggle animations) to provide a more delightful user experience
 - Collaborating with the designer to optimize some of the design elements for visual accessibility (some colour combinations in the designs don't pass [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) recommendations for colour contrast)
 - Add unit tests and document components with [Storybook](https://storybook.js.org/) or similar
-- Consider swapping out Styled Components and Styled System for [Theme UI](https://theme-ui.com/), a higher-level solution for building component libraries based on design systems. I’ve been wanting to try using Theme UI for some time, but given the time constraints for this project, I didn’t want to burn time on unfamiliar APIs. However, I feel this would be highly worth initial consideration in the real world when considering creating a new component library, as — being a higher level system — it requires less low-level knowledge on the part of developers, and thus may be faster to get working with.
+- Consider swapping out Styled Components and Styled System for [Theme UI](https://theme-ui.com/), a higher-level solution for building component libraries based on design systems. I’ve been wanting to try using Theme UI for some time, but given the time constraints for this project, I didn’t want to burn time on unfamiliar APIs. However, I feel this would be highly worth initial consideration in the real world when considering creating a new component library, as — being [a higher level system with a more idiomatic API](https://jxnblk.com/blog/two-steps-forward/) — it requires less low-level knowledge on the part of developers, and thus may be faster to get working with.
 
 ### Not included
 
