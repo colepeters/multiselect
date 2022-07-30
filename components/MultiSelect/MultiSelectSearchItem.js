@@ -1,6 +1,7 @@
+import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
 import { Item } from '@radix-ui/react-dropdown-menu'
-import { Cross2Icon, MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -61,7 +62,7 @@ export default function SearchItem({ value, setValue, placeholder }) {
           alignItems='center'
           justifyContent='center'
         >
-          <MagnifyingGlassIcon />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
         </Box>
         <Item asChild onSelect={(e) => e.preventDefault()}>
           <StyledInput
@@ -73,7 +74,7 @@ export default function SearchItem({ value, setValue, placeholder }) {
         {value !== '' && (
           <ClearButton onClick={() => setValue('')}>
             <AccessibleIcon.Root label='Clear search term'>
-              <Cross2Icon />
+              <FontAwesomeIcon icon={faXmark} />
             </AccessibleIcon.Root>
           </ClearButton>
         )}
