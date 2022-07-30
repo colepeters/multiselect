@@ -81,7 +81,7 @@ I’ve also assumed that I’ll be working with designers who are comfortable co
 
 #### Time
 
-Unless my colleagues in engineering and design are already proficient in the exact technical stack and philosophy this architecture embodies, I presume that time will be made avaialable by the organization for me to provide a thorough introduction to those colleagues before the organization can begin shipping features and products backed by this stack.
+Unless my colleagues in engineering and design are already proficient in the exact technical stack and philosophy this architecture embodies, I presume that time will be made available by the organization for me to provide a thorough introduction to those colleagues before the organization can begin shipping features and products backed by this stack.
 
 The strength of this architecture/approach lies in rapid and consistent iteration, however this is premised on the individuals involved all being able to speak the same language. As the focus on composability and contraints baked into this system are not necessarily standard practice, and several of the libraries used may not be familiar to my fellow engineers in particular, I would want to make sure my colleagues were all well equipped to make this system a success.
 
@@ -99,9 +99,9 @@ The only thing which I feel was a true compromise which remains in my implementa
 
 ### Stretch goals
 
-There were no stretch goals defined for this assignment, but given more time and with respect to the multiselect component, I would likely work on the following:
+There were no stretch goals defined for this assignment, but given more time, I would likely work on the following:
 
-- Adding (subtle) UI animations (open/close animations for the multiselect content area, checkmark toggle animations) to provide a more delightful user experience
+- Adding subtle UI animations (open/close animations for the multiselect content area, checkmark toggle animations) to provide a more delightful user experience
 - Collaborating with the designer to optimize some of the design elements for visual accessibility (some colour combinations in the designs don't pass [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) recommendations for colour contrast)
 - Add unit tests and document components with [Storybook](https://storybook.js.org/) or similar
 - Consider swapping out Styled Components and Styled System for [Theme UI](https://theme-ui.com/), a higher-level solution for building component libraries based on design systems. I’ve been wanting to try using Theme UI for some time, but given the time constraints for this project, I didn’t want to burn time on unfamiliar APIs. However, I feel this would be highly worth initial consideration in the real world when considering creating a new component library, as — being [a higher level system with a more idiomatic API](https://jxnblk.com/blog/two-steps-forward/) — it requires less low-level knowledge on the part of developers, and thus may be faster to get working with.
@@ -110,7 +110,7 @@ There were no stretch goals defined for this assignment, but given more time and
 
 #### Tests
 
-I did not include any form of tests for this exercise. I would ideally have written unit tests for functions with interface with the API and the data returned by it. As mentioned, I have also not included component documentation beyond comments, PropTypes and JSDoc comments; I would want to provide much more documentation than this in a real life scenario. However, given the stated focus for this exercise in the documentation I was provided, I also didn’t consider tests to be critical.
+I did not include any form of tests for this exercise. I would ideally have written unit tests for functions that interface with the API and the data returned by it. As mentioned, I have also not included component documentation beyond comments, PropTypes and JSDoc comments; I would want to provide much more documentation than this in a real life scenario. However, given the stated focus for this exercise in the documentation I was provided, I also didn’t consider tests to be critical.
 
 #### Additional webfonts
 
@@ -139,6 +139,6 @@ There are some differences between the provided designs and my implementation du
 
 In general I think this was a great technical exercise, with lots of areas for candidates to sink their teeth into. Frontend architecture and design systems are two areas of work that I deeply enjoy getting lost in, so I appreciated the nature of this challenge as well. I found the documentation to be generally fantastic, while leaving enough out to encourage candidates to ask questions, which I think is important.
 
-I would say that the stated time is a bit optimistic. Although I really got into the weeds on this exercise and thus spent a fair bit more time than suggested, I think a ballpark for 6–8 hours would be much more appropriate given the dual focus on both technical architecture _and_ a fairly complex UI component. In my opinion, the stated estimate (4-6 hours in the email I received, 3–4 hours in the attached documentation) would be more suitable to only implementing the UI component without considering the full technical architecture.
+I would say that the stated time is a bit optimistic. Although I really got into the weeds on this exercise and thus spent a fair bit more time than suggested, I think a ballpark of 6–8 hours would be much more appropriate given the dual focus on both technical architecture _and_ a fairly complex UI component. In my opinion, the stated estimate (4-6 hours in the email I received, 3–4 hours in the attached documentation) would be more suitable to only implementing the UI component without considering the full technical architecture.
 
 As a whole I really appreciated this exercise, and had a good time working through it!
