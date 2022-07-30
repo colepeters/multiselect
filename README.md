@@ -101,8 +101,9 @@ The only thing which I feel was a true compromise which remains in my implementa
 
 There were no stretch goals defined for this assignment, but given more time, I would likely work on the following:
 
-- Adding subtle UI animations (open/close animations for the multiselect content area, checkmark toggle animations) to provide a more delightful user experience
-- Collaborating with the designer to optimize some of the design elements for visual accessibility (some colour combinations in the designs don't pass [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) recommendations for colour contrast)
+- Separate the design system/component library concerns (theme file, primitives, multiselect component) into their own package so they could be versioned and used in multiple repos
+- Add subtle UI animations (open/close animations for the multiselect content area, checkmark toggle animations) to provide a more delightful user experience
+- Collaborate with the designer to optimize some of the design elements for visual accessibility (some colour combinations in the designs don't pass [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) recommendations for colour contrast)
 - Add unit tests and document components with [Storybook](https://storybook.js.org/) or similar
 - Consider swapping out Styled Components and Styled System for [Theme UI](https://theme-ui.com/), a higher-level solution for building component libraries based on design systems. I’ve been wanting to try using Theme UI for some time, but given the time constraints for this project, I didn’t want to burn time on unfamiliar APIs. However, I feel this would be highly worth initial consideration in the real world when considering creating a new component library, as — being [a higher level system with a more idiomatic API](https://jxnblk.com/blog/two-steps-forward/) — it requires less low-level knowledge on the part of developers, and thus may be faster to get working with.
 
