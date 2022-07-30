@@ -1,4 +1,5 @@
 import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
+import { Item } from '@radix-ui/react-dropdown-menu'
 import { Cross2Icon, MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import styled from 'styled-components'
 
@@ -12,11 +13,16 @@ const StyledInput = styled.input.attrs({
   all: unset;
   position: absolute;
   inset: 0;
+  border-radius: ${(props) => props.theme.radii.small}px;
   padding: 0 ${baseSize}px;
   /* Remove Webkit's default search input UI */
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     appearance: none;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.blue500};
   }
 `
 
@@ -56,11 +62,13 @@ export default function SearchItem({ value, setValue, placeholder }) {
         >
           <MagnifyingGlassIcon />
         </Box>
-        <StyledInput
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder={placeholder}
-        />
+        <Item asChild onSelect={(e) => e.preventDefault()}>
+          <StyledInput
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder={placeholder}
+          />
+        </Item>
         {value !== '' && (
           <ClearButton onClick={() => setValue('')}>
             <AccessibleIcon.Root label='Clear search term'>
