@@ -52,8 +52,8 @@ export default function PetSelect({ pets }) {
     <MultiSelect.Root
       label={
         selectedPets.length
-          ? `Selected Pets (${selectedPets.length})`
-          : 'Selected Pets'
+          ? `Select Pets (${selectedPets.length})`
+          : 'Select Pets'
       }
     >
       <MultiSelect.SearchItem
